@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XRP SPORTS - A Guilda dos Sonhos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #120a2a;
+      color: #ddd;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #1e0f4d;
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 3px solid #7b1fa2;
+    }
+    header h1 {
+      color: #b47de3;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: #b47de3;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #e1aaff;
+    }
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px 40px;
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h2 {
+      color: #dda0ff;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #7b1fa2;
+      padding-bottom: 8px;
+      font-size: 2rem;
+    }
+    /* Slogan Section */
+    #slogan {
+      background: #1e0f4d;
+      padding: 25px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #7b1fa2;
+      text-align: center;
+      color: #e3c7ff;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    #slogan p {
+      margin-bottom: 15px;
+    }
+    #slogan .btn-group {
+      margin-top: 20px;
+    }
+    #slogan .btn-group button {
+      background-color: #7b1fa2;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      padding: 12px 25px;
+      margin: 0 12px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    #slogan .btn-group button:hover {
+      background-color: #b47de3;
+    }
+
+    /* Destaques */
+    #destaques {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .destaque-item {
+      background: #2a1c5d;
+      flex: 1 1 30%;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #7b1fa2;
+      color: #d6bfff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: center;
+      min-width: 250px;
+      line-height: 1.4;
+    }
+
+    /* Quem Somos */
+    #quem-somos p {
+      font-size: 1.15rem;
+      color: #ccc;
+      max-width: 800px;
+      margin-top: 12px;
+    }
+    #quem-somos button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #7b1fa2;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #quem-somos button:hover {
+      background-color: #b47de3;
+    }
+
+    /* Grupo WhatsApp */
+    #whatsapp-group {
+      background: #1e0f4d;
+      padding: 25px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #7b1fa2;
+      text-align: center;
+      color: #e3c7ff;
+    }
+    #whatsapp-group h2 {
+      margin-bottom: 20px;
+    }
+    #qr-code {
+      margin: 0 auto 20px;
+      max-width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #7b1fa2;
+    }
+    #whatsapp-group a {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 25px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    #whatsapp-group a:hover {
+      background-color: #1ebe57;
+    }
+
+    /* Contato */
+    #contato {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    #contato form {
+      display: flex;
+      flex-direction: column;
+    }
+    #contato label {
+      margin: 10px 0 6px;
+      font-weight: 600;
+    }
+    #contato input, #contato textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #1e0f4d;
+      color: #eee;
+      font-size: 1rem;
+      resize: vertical;
+    }
+    #contato button {
+      margin-top: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #7b1fa2;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #contato button:hover {
+      background-color: #b47de3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      background-color: #1e0f4d;
+      color: #b47de3;
+      font-size: 0.9rem;
+      border-top: 3px solid #7b1fa2;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      #destaques {
+        flex-direction: column;
+        gap: 25px;
+      }
+      nav a {
+        margin: 0 12px;
+      }
+    }
+    @media(max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        font-size: 0.9rem;
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>XRP SPORTS</h1>
+    <nav>
+      <a href="#slogan">Home</a>
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#whatsapp-group">Grupo</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="slogan">
+      <p>🔥 <strong>XRP SPORTS – A GUILDA DOS SONHOS</strong> 🔥</p>
+      <p>Aqui, você não joga sozinho. Aqui, você evolui, treina e se torna lenda!</p>
+      <div id="destaques-home" style="margin-top:25px;">
+        <p>💥 X-Treinos diários</p>
+        <p>💥 Campeonatos insanos</p>
+        <p>💥 Time fechado e união verdadeira</p>
+        <p>🚀 Se você respira Free Fire e sonha em competir de verdade, a XRP SPORTS é o seu lugar!</p>
+      </div>
+      <div class="btn-group">
+        <button onclick="document.getElementById('quem-somos').scrollIntoView()">Saiba mais</button>
+        <button onclick="document.getElementById('contato').scrollIntoView()">Fale conosco</button>
+      </div>
+    </section>
+
+    <section id="destaques">
+      <div class="destaque-item">
+        <h3>X-Treinos diários</h3>
+        <p>Treinos pensados para evolução rápida — mecânica, posicionamento e tática em squads.</p>
+      </div>
+      <div class="destaque-item">
+        <h3>Campeonatos insanos</h3>
+        <p>Participação em torneios e scrims com foco em performance e visibilidade.</p>
+      </div>
+      <div class="destaque-item">
+        <h3>Time fechado</h3>
+        <p>União verdadeira, comunicação e disciplina para competir em alto nível.</p>
+      </div>
+    </section>
+
+    <section id="quem-somos">
+      <h2>Quem somos</h2>
+      <p>A XRP SPORTS é uma guilda dedicada a transformar jogadores em competidores de alto nível. Priorizamos treino, disciplina e espírito de equipe.</p>
+      <button onclick="alert('Obrigado por querer saber mais! Visite nossas redes sociais ou entre em contato.')">Ver mais</button>
+    </section>
+
+    <section id="whatsapp-group">
+      <h2>XRP SPORTS em ação</h2>
+      <p>Entre no nosso grupo oficial</p>
+      <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://chat.whatsapp.com/EP4kwV0zFpHF5mtfwmngm2?mode=ac_t" alt="QR Code Grupo WhatsApp XRP SPORTS" />
+      <p>Ou acesse: <a href="https://chat.whatsapp.com/EP4kwV0zFpHF5mtfwmngm2?mode=ac_t" target="_blank" rel="noopener noreferrer">Entrar no grupo</a></p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form onsubmit="event.preventDefault(); alert('Mensagem enviada! Entraremos em contato em breve.'); this.reset();">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p style="margin-top: 25px; text-align:center; font-weight:600;">
+        XRP SPORTS<br />
+        📞 +55 71 8315-3853<br />
+        📸 <a href="https://instagram.com/xrpsports" target="_blank" rel="noopener noreferrer" style="color:#b47de3;">@xrpsports</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 XRP SPORTS. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
